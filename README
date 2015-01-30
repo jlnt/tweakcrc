@@ -1,0 +1,36 @@
+* EDIT, 2015: moving this to GitHub for archival purposes.
+
+* EDIT, 2011: and 10 years later it turns out I have to modify this *horrible*
+piece of code. I really should rewrite this.
+
+You can use this tool to compute a CRC32 pre-image, or to modify existing data
+at a given offset to match a given CRC.
+
+I developed this around 2000 for an exploit and it's a ridiculously bad piece of
+code. It probably assumes little endianness.
+
+It was updated for a Securitech exploit in 2006. The algorithm I developed is
+explained here (in French, but it's mostly maths anyway).
+
+This code is astonishingly bad, it's embarrassing and you should probably not
+use it.
+
+I've put this on Google Code in 2011 because someone needed it. If you need it
+for serious use, e-mail me and I might rewrite it for you, properly, with
+tables.
+
+You're probably only looking for calcvect.c (and maybe crc32.c).
+
+I'm sincerely sorry I expose you to this,
+
+Julien
+
+* Original README:
+
+This is a very raw version of my CRC tools.
+Give tweakcrc a file name, an offset and a target CRC and it will patch that file at the given
+offset so that the CRC of the file matches the one you gave.
+
+  -- Julien TINNES
+
+
